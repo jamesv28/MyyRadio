@@ -3,6 +3,7 @@ package com.example.jvolmert.myradio.Fragments;
 
 import android.os.Bundle;
 //import android.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,8 +64,30 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.fragment_main, container, false);
+
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+
+        StationsFragment sf1;
+        StationsFragment sf2;
+        StationsFragment sf3;
+
+        sf1 = StationsFragment.newInstance("blah", "blah");
+        fm.beginTransaction().add(R.id.container_top_row, sf1).commit();
+
+        sf2 = StationsFragment.newInstance("blah", "blah");
+        fm.beginTransaction().add(R.id.container_mid_row, sf2).commit();
+
+        sf3 = StationsFragment.newInstance("blah", "blah");
+        fm.beginTransaction().add(R.id.container_bottom_row, sf3).commit();
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        return v;
     }
+
+    // TODO: Need to add interaction listener to the Main Activity
+    
 
 }

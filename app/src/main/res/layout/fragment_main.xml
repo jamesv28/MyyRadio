@@ -7,8 +7,45 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
 
+        >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25sp"
+                android:text="It's Friday Evening"
+                android:paddingTop="15dp"
+                android:paddingLeft="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#A4a4A4"
+                android:textSize="18sp"
+                android:text="Play Something for..."
+                android:paddingTop="12dp"
+                android:paddingLeft="12dp" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/container_top_row"></FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/container_mid_row"></FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/container_bottom_row"></FrameLayout>
+        </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
 </FrameLayout>
