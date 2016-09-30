@@ -73,13 +73,13 @@ public class MainFragment extends Fragment {
         StationsFragment sf2;
         StationsFragment sf3;
 
-        sf1 = StationsFragment.newInstance("blah", "blah");
+        sf1 = StationsFragment.newInstance(StationsFragment.STATION_TYPE_FEATURED);
         fm.beginTransaction().add(R.id.container_top_row, sf1).commit();
 
-        sf2 = StationsFragment.newInstance("blah", "blah");
+        sf2 = StationsFragment.newInstance(StationsFragment.STATION_TYPE_RECENT);
         fm.beginTransaction().add(R.id.container_mid_row, sf2).commit();
 
-        sf3 = StationsFragment.newInstance("blah", "blah");
+        sf3 = StationsFragment.newInstance(StationsFragment.STATION_TYPE_PREV);
         fm.beginTransaction().add(R.id.container_bottom_row, sf3).commit();
 
 
@@ -88,6 +88,5 @@ public class MainFragment extends Fragment {
     }
 
     // TODO: Need to add interaction listener to the Main Activity
-    
 
 }
